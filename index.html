@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <title>Personal Trainer - Landing Page</title>
+  </head>
+  <body>
+    <main id="banner">      
+      <header class="container">
+        <h1>PERSONAL</h1>
+        <nav>
+          <ul class="menu">
+            <li><a href="/">Sobre</a></li>
+            <li><a href="/">Planos</a></li>
+            <li><a href="/">Contato</a></li>
+          </ul>
+        </nav>
+      </header>
+
+
+    <section id="banner-about">
+      <h1>Personal Trainer</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum mollitia 
+        suscipit tempore dignissimos laudantium adipisci dicta accusantium 
+        expedita, odit quidem nobis, sunt consequuntur dolor alias illum. 
+        Asperiores porro quis pariatur.
+      </p>
+      <button>Entre em Contato</button>
+    </section>
+
+
+    <div id="banner-slide">
+      <div id="slide-elements" >
+        <picture>
+          <source media="(max-width: 768px)" srcset="./assets/bgmob.png" >
+          <source media="(min-width: 1800px)"  srcset="./assets/bg4k.png" >
+          <img src="./assets/bg.png" alt="atleta">
+        </picture>
+        <picture>
+          <source media="(max-width: 768px)" srcset="./assets/bgtwomob.png" >
+          <source media="(min-width: 1800px)" srcset="./assets/bgtwo4k.png" >
+          <img src="./assets/bgtwo.png" alt="atleta">
+        </picture>
+        <picture>
+          <source media="(max-width: 768px)" srcset="./assets/bgthreemob.png" >
+          <source media="(min-width: 1800px)" srcset="./assets/bgthree4k.png" >
+          <img src="./assets/bgthree.png" alt="atleta">
+        </picture>      
+      </div>
+      <div id="slide-controls"></div>
+    </div>
+
+
+    
+  </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
