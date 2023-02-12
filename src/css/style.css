@@ -137,7 +137,6 @@ header .menu-header a:hover{
 #slide-elements{
   display:grid;
   grid-area: 1/1;
-  -moz-user-select: none;
   -webkit-touch-callout: none;
   pointer-events: none;
 }
@@ -146,11 +145,7 @@ header .menu-header a:hover{
   grid-area: 1/1;
   opacity: 0;
   visibility: none;
-  background:#000; 
-  -moz-user-select: none;
-  -webkit-touch-callout: none;
-  pointer-events: none;
-
+  background:#000;
 }
 
 #slide-elements > .active {
