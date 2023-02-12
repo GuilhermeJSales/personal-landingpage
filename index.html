@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="" />
@@ -12,13 +12,14 @@
   </head>
   <body>
     <main id="banner">      
-      <header class="container">
-        <h1>PERSONAL</h1>
+      <header>
+        <img src="./assets/logotipo.svg" alt="logotipo personal trainer">
         <nav>
-          <ul class="menu">
-            <li><a href="/">Sobre</a></li>
-            <li><a href="/">Planos</a></li>
-            <li><a href="/">Contato</a></li>
+          <button class="mobileButton"></button>
+          <ul class="menu-header">
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Planos</a></li>
+            <li><a href="#">Contato</a></li>
           </ul>
         </nav>
       </header>
@@ -27,10 +28,9 @@
     <section id="banner-about">
       <h1>Personal Trainer</h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum mollitia 
-        suscipit tempore dignissimos laudantium adipisci dicta accusantium 
-        expedita, odit quidem nobis, sunt consequuntur dolor alias illum. 
-        Asperiores porro quis pariatur.
+        Vá treinar mesmo quando estiver desmotivado. O meu trabalho é te animar 
+        a fazer o melhor treino mostrando que sentimentos vem e vão, mas o 
+        resultado de não ceder a eles permanece e aparece.
       </p>
       <button>Entre em Contato</button>
     </section>
@@ -38,21 +38,32 @@
 
     <div id="banner-slide">
       <div id="slide-elements" >
-        <picture>
-          <source media="(max-width: 768px)" srcset="./assets/bgmob.png" >
-          <source media="(min-width: 1800px)"  srcset="./assets/bg4k.png" >
-          <img src="./assets/bg.png" alt="atleta">
-        </picture>
-        <picture>
-          <source media="(max-width: 768px)" srcset="./assets/bgtwomob.png" >
-          <source media="(min-width: 1800px)" srcset="./assets/bgtwo4k.png" >
-          <img src="./assets/bgtwo.png" alt="atleta">
-        </picture>
-        <picture>
-          <source media="(max-width: 768px)" srcset="./assets/bgthreemob.png" >
-          <source media="(min-width: 1800px)" srcset="./assets/bgthree4k.png" >
-          <img src="./assets/bgthree.png" alt="atleta">
-        </picture>      
+        <figure>
+          <picture>
+            <source media="(max-width: 768px)" srcset="./assets/bgmob.png" >
+            <source media="(min-width: 1800px)"  srcset="./assets/bg4k.png" >
+            <img src="./assets/bg.png" alt="atleta">
+          </picture>
+          <figcaption>Imagem de fundo do site</figcaption>
+        </figure>
+        
+        <figure>
+          <picture>
+            <source media="(max-width: 768px)" srcset="./assets/bgtwomob.png" >
+            <source media="(min-width: 1800px)" srcset="./assets/bgtwo4k.png" >
+            <img src="./assets/bgtwo.png" alt="atleta">
+          </picture>
+          <figcaption>Imagem de fundo do site 2</figcaption>
+        </figure>
+        
+        <figure>
+          <picture>
+            <source media="(max-width: 768px)" srcset="./assets/bgthreemob.png" >
+            <source media="(min-width: 1800px)" srcset="./assets/bgthree4k.png" >
+            <img src="./assets/bgthree.png" alt="atleta">
+          </picture>
+          <figcaption>Imagem de fundo do site 3</figcaption>
+        </figure>     
       </div>
       <div id="slide-controls"></div>
     </div>

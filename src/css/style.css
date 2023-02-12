@@ -1,3 +1,9 @@
+*:root{
+  --background-color: #131416;
+  --primary-color: #0074E8;
+  --secondary-color: #FEFEFE;
+}
+
 *{
   margin: 0;
   padding:0;
@@ -8,22 +14,23 @@
 
 img{
   display:block;
+  max-width: 100%;
+}
+
+figure img{
   min-height: 100vh;
   width: 100vw;
   object-fit: cover;
 }
 
-
 body{
-  background:#131416;
+  background: var(--background-color);
   font-family:'Montserrat', sans-serif;
   font-size:1.25rem;
   line-height: 1.2;
   letter-spacing: 1px;
-  color:#FEFEFE;
+  color:var(--secondary-color);
 }
-
-
 
 
 /* HEADER */
@@ -51,7 +58,11 @@ header{
   z-index: 1;
 }
 
-header .menu{
+header .mobileButton{
+  display:none;
+}
+
+header .menu-header{
   display:flex;
   gap: 30px;
   justify-content: space-between;
@@ -62,19 +73,20 @@ header h1{
   font-family: 'Secular One', sans-serif;
 }
 
-header .menu a{
-  color:#FEFEFE;
+header .menu-header a{
+  color:var(--secondary-color);
   font-size:1.5rem;
   transition: .5s ease-in-out;
 }
 
-header .menu a:hover{
-  color:#0074E8;
+header .menu-header a:hover{
+  color:var(--primary-color);
   font-size:1.5rem;
 }
 
 
 
+/* BANNER ABOUT */
 #banner-about{
   z-index: 1;
   pointer-events: none;
@@ -83,41 +95,32 @@ header .menu a:hover{
 
 
 #banner-about h1{
-  color:#0074E8;
+  color:var(--primary-color);
   font-size: 3.75rem;
   font-family: 'Secular One', sans-serif;
   text-transform: uppercase;
+  text-shadow: 2px 2px 6px var(--background-color);
 }
 
 #banner-about button{
   font-family: 'Secular One', sans-serif;
   font-size:1.5rem;
   text-transform: uppercase;
-  color:#FEFEFE;
-  background: #0074E8;
+  color:var(--secondary-color);
+  background: var(--primary-color);
   padding: 20px;
   border-radius: 14px;
   margin-top:30px;
   pointer-events: initial;
   cursor:pointer;
-
+  border:none;
+  outline:none;
+  transition: .5s ease-in-out;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#banner-about button:hover{
+  background:#033EE1;
+}
 
 
 
@@ -134,22 +137,25 @@ header .menu a:hover{
 #slide-elements{
   display:grid;
   grid-area: 1/1;
+  -moz-user-select: none;
+  -webkit-touch-callout: none;
+  pointer-events: none;
 }
 
-#slide-elements > picture{
+#slide-elements > figure{
   grid-area: 1/1;
   opacity: 0;
   visibility: none;
-  background:#000;
-  
+  background:#000; 
+  -moz-user-select: none;
+  -webkit-touch-callout: none;
+  pointer-events: none;
+
 }
 
 #slide-elements > .active {
   opacity: 1;
-  visibility: visible;
-  object-fit: cover;
-  min-height: 100vh;
-  
+  visibility: visible; 
 }
 
 
@@ -168,17 +174,115 @@ header .menu a:hover{
 @media (max-width: 768px){
 
   #banner{
-    padding:40px;
-    
+    padding:40px;    
   }
-
 
   header{
     padding: 15px 40px;
+    z-index:2;
   }
+
+  header .mobileButton{
+    display:block;
+    background: transparent;
+    color:var(--secondary-color);
+    cursor: pointer;
+    padding: 20px;
+    border: none;
+    outline:none;
+    transition: .5s ease-in-out;
+    -webkit-tap-highlight-color: transparent;      
+  }
+
+
+  header .mobileButton::after{
+    content:"";
+    display:block;
+    background: currentColor;
+    width: 30px;
+    height: 2px;
+    box-shadow:  0 10px currentColor,  0 -10px currentColor;
+    transition: .5s ease-in-out;
+    }
+
+
+    header .mobileButton.active::after{
+      transform: rotate(90deg);
+      width: 6px;
+      height: 6px;
+      border-radius: 50px;
+
+      }
+
+
+  header .mobileButton:hover{
+    color:var(--primary-color);
+  } 
+
+  
+  header .menu-header{
+   position:fixed;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   top:0;
+   left:-800px;
+   background:var(--background-color);
+   height: 100vh;
+   width: 60vw;
+   opacity:0;
+   transition: .5s ease-in-out;
+  }
+
+  header .menu-header.active{
+    left:0;
+    opacity:1;
+   }
+
+   header .menu-header li{
+    opacity: 0;
+   }
 
 
   #banner-about{
     max-width: 400px;
   }
+  
+  #banner-about h1{
+    font-size: 2.625rem;
+  }
+
+  #banner-about p{
+    font-size: 1.125rem;
+  }
+
+
+  #banner-about button{
+    font-size:1.25rem;
+    padding: 14px;
+  }
+
+
+  @keyframes linksMobile {
+    from{
+      opacity: 0;
+      transform: translateX(-100%);
+    }  to {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+}
+
+
+@media (max-width: 350px){
+  #banner{
+    padding:20px;
+  }
+
+  header img{
+    width: 90%;
+  }
+
+
 }
