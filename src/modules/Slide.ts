@@ -79,6 +79,7 @@ export default class Slide {
 
       this.controls.addEventListener('pointerdown', () => this.pause());
       this.controls.addEventListener('pointerup', () => this.continue());
+      this.controls.addEventListener('touchend', () => this.continue());
 
     prevButton.addEventListener('pointerup', () => this.prev());
     nextButton.addEventListener('pointerup', () => this.next());
