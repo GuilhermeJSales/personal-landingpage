@@ -13,7 +13,11 @@
   <body>
     <main id="banner">      
       <header>
-        <img src="./assets/logotipo.svg" alt="logotipo personal trainer">
+        <div class="logotipo">
+          <a href="#">
+            <img src="./assets/logotipo.svg" alt="logotipo personal trainer">
+          </a>
+        </div>
         <nav>
           <button class="mobileButton"></button>
           <ul class="menu-header">
@@ -72,26 +76,29 @@
   <section id="numbers">
     <div class="numbers-grid">
       <div>
-        <span class="count">30</span>
-        <span>Alunos de consultoria online</span>
-      </div>
+        <div class="percentage-count">
+          <span class="count active">100</span>
+          <span>%</span>
+        </div>
+          <span class="description-count">de satisfação dos alunos</span>
+      </div>  
+
 
       <div>
-        <span class="count">150</span>
-        <span>Planilhas vendidas</span>
+        <span class="count active">50</span>
+        <span class="description-count">Alunos de consultoria online</span>
       </div>
 
-      <div>
-      <div class="percentage-count">
-        <span class="count">100</span>
-        <span>%</span>
-      </div>
-        <span>de satisfação</span>
-      </div>
 
       <div>
-        <span class="count">6</span>
-        <span>Anos de experiência</span>
+        <span class="count active">150</span>
+        <span class="description-count">Planilhas vendidas</span>
+      </div>
+     
+
+      <div>
+        <span class="count active">20</span>
+        <span class="description-count">Anos de experiência</span>
       </div>
     </div>
   </section>

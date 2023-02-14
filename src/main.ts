@@ -1,3 +1,4 @@
+import AnimateNumbers from "./modules/AnimateNumbers";
 import MobileMenu from "./modules/MobileMenu";
 import Slide from "./modules/Slide";
 
@@ -21,8 +22,15 @@ const navList = document.querySelectorAll<HTMLElement>('.menu-header li');
 if(button && headerNav && ulList && navList && navList.length){
   const mobileMenu = new MobileMenu(button, headerNav, ulList, Array.from(navList));
   mobileMenu.init();
+ 
 }
 
 
 
 
+const number = document.querySelectorAll<HTMLElement>('#numbers .count');
+const section = document.querySelector<HTMLElement>('#numbers')
+
+if(number && section && number.length){
+  const animaNumber = new AnimateNumbers(Array.from(number),section, 40);
+}

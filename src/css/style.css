@@ -68,10 +68,6 @@ header .menu-header{
   justify-content: space-between;
 }
 
-header h1{
-  font-size:3.125rem;
-  font-family: 'Secular One', sans-serif;
-}
 
 header .menu-header a{
   color:var(--secondary-color);
@@ -178,6 +174,7 @@ header .menu-header a:hover{
 .numbers-grid{
   display:grid;
   grid-template-columns: repeat(4, 1fr);
+  text-align: center;
 }
 
 .numbers-grid div{
@@ -206,6 +203,10 @@ header .menu-header a:hover{
 
 
 @media (max-width: 768px){
+
+  body{
+    font-size:1.125rem;
+  }
 
   #banner{
     padding:40px;    
@@ -286,11 +287,6 @@ header .menu-header a:hover{
     font-size: 2.625rem;
   }
 
-  #banner-about p{
-    font-size: 1.125rem;
-  }
-
-
   #banner-about button{
     font-size:1.25rem;
     padding: 14px;
@@ -306,17 +302,66 @@ header .menu-header a:hover{
       transform: translateX(0%);
     }
   }
+
+  #numbers{
+    padding:40px;
+  }
+  
+  .numbers-grid{
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
+  }
+  
+  .count{
+    font-size:2.5rem;
+    font-weight: 700;
+  }
+
+
 }
 
 
-@media (max-width: 350px){
+
+
+
+@media (max-width: 425px){
+
+  body{
+    font-size:1rem;
+  }
+
   #banner{
     padding:20px;
   }
 
-  header img{
-    width: 90%;
+  #banner-about h1{
+    font-size: 1.75rem;
+  text-shadow: 1px 1px 2px var(--background-color);
+  }
+  
+  #banner-about button{
+    font-size:1rem;
+    padding: 18px;
+    margin-top:20px;
+  }
+  
+
+  #numbers{
+    padding:20px;
+  }
+  
+  .numbers-grid{
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+  
+  }
+  
+  .count{
+    font-size:2rem;
   }
 
+  .description-count{
+    font-size:.875rem;
+  }
 
 }
