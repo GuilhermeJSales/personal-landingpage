@@ -3,11 +3,21 @@ export default class AnimateNumbers{
   time: number;
   section: HTMLElement;
   private interval: any;
+  private observer: IntersectionObserver;
   constructor(numbers: HTMLElement[], section:HTMLElement, time: number = 30){
     this.numbers = numbers;  
     this.time = time;  
     this.section = section;
-    this.init();
+
+
+    this.observer = new IntersectionObserver(this.handleObserver.bind(this),{
+      root:null,
+      rootMargin: "0px",
+      threshold: 1.0,
+    },);
+
+    this.observer.observe(this.section);
+
   }
 
 
@@ -24,29 +34,19 @@ animate() {
         number.innerText = String(total);
         clearInterval(this.interval);
       }
-    }, this.time * Math.random());
+    }, this.time);
   }
 }
   );
 }
 
 
-observe() {
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if(entry.intersectionRatio >= 1){
-        observer.disconnect()
-        this.animate()
-      }
-    })
-  },{
-    threshold:1
-  })
-  observer.observe(this.section);
-}
-
-
-init(){
-    this.observe();
+private handleObserver(entries: IntersectionObserverEntry[]) : void {
+  entries.forEach((entry) => {
+    if(entry.isIntersecting){
+      this.animate();
+      this.observer.unobserve(this.section);
+    }
+  }); 
 }
 }

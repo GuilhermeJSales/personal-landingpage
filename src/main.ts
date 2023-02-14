@@ -32,5 +32,5 @@ const number = document.querySelectorAll<HTMLElement>('#numbers .count');
 const section = document.querySelector<HTMLElement>('#numbers')
 
 if(number && section && number.length){
-  const animaNumber = new AnimateNumbers(Array.from(number),section, 40);
+  const animaNumber = new AnimateNumbers(Array.from(number),section);
 }
