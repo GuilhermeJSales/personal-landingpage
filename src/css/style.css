@@ -568,7 +568,7 @@ header .menu-header a:hover{
 
 
   #plans{
-    background:#0a0b0c;
+    background-image: url('../../assets/plansbgmob.png');
   }
 
   .title-plans-sections{
@@ -598,6 +598,10 @@ header .menu-header a:hover{
 
   .plans-options:last-of-type{
     grid-area: 1;
+  }
+
+  .plans-options:nth-of-type(2){
+    grid-area: 2;
   }
 
 
