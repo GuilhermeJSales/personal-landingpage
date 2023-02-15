@@ -4,10 +4,11 @@ export default class AnimateNumbers{
   section: HTMLElement;
   private interval: any;
   private observer: IntersectionObserver;
-  constructor(numbers: HTMLElement[], section:HTMLElement, time: number = 30){
+  constructor(numbers: HTMLElement[], section:HTMLElement,  time: number = 30){
     this.numbers = numbers;  
     this.time = time;  
     this.section = section;
+
 
 
     this.observer = new IntersectionObserver(this.handleObserver.bind(this),{
@@ -44,6 +45,7 @@ animate() {
 private handleObserver(entries: IntersectionObserverEntry[]) : void {
   entries.forEach((entry) => {
     if(entry.isIntersecting){
+      this.section.classList.add('active');
       this.animate();
       this.observer.unobserve(this.section);
     }

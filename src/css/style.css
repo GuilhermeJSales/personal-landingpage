@@ -2,6 +2,8 @@
   --background-color: #131416;
   --primary-color: #0074E8;
   --secondary-color: #FEFEFE;
+  --title-font: 'Secular One', sans-serif;
+  --text-font: 'Montserrat', sans-serif;
 }
 
 *{
@@ -25,7 +27,7 @@ figure img{
 
 body{
   background: var(--background-color);
-  font-family:'Montserrat', sans-serif;
+  font-family:var(--text-font);
   font-size:1.25rem;
   line-height: 1.2;
   letter-spacing: 1px;
@@ -93,13 +95,13 @@ header .menu-header a:hover{
 #banner-about h1{
   color:var(--primary-color);
   font-size: 3.75rem;
-  font-family: 'Secular One', sans-serif;
+  font-family: var(--title-font);
   text-transform: uppercase;
   text-shadow: 2px 2px 6px var(--background-color);
 }
 
 #banner-about button{
-  font-family: 'Secular One', sans-serif;
+  font-family: var(--title-font);
   font-size:1.5rem;
   text-transform: uppercase;
   color:var(--secondary-color);
@@ -169,11 +171,18 @@ header .menu-header a:hover{
 
 #numbers{
   padding:100px;
+  opacity: 0;
+  transition: .5s ease-in;
+}
+
+#numbers.active{
+  opacity:1;
 }
 
 .numbers-grid{
   display:grid;
   grid-template-columns: repeat(4, 1fr);
+  gap:20px;
   text-align: center;
 }
 
@@ -190,13 +199,11 @@ header .menu-header a:hover{
 
 
 .count{
-  font-family: 'Secular One', sans-serif;
+  font-family: var(--title-font);
   font-size:3.125rem;
   color:var(--primary-color);
   font-weight: 700;
 }
-
-
 
 /* PLANOS */
 
@@ -206,11 +213,15 @@ header .menu-header a:hover{
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
-  padding: 100px;
+  padding-bottom: 100px;
+}
+
+.title-plans-sections{
+  padding:100px;
 }
 
 #plans h2{
-  font-family:'Secular One', sans-serif;
+  font-family:var(--title-font);
   font-size:3.125rem;
   text-transform: uppercase;
   color:var(--primary-color);
@@ -218,17 +229,179 @@ header .menu-header a:hover{
 }
 
 #plans h3{
-  font-family:'Montserrat', sans-serif;
+  font-family:var(--text-font);
   font-size:1.25rem;
   font-weight: 500;
   text-transform: uppercase;
 }
 
+.plans-container{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(230px, 380px));
+  gap:15px;
+  margin: 0 15px;
+  align-items: start;
+  justify-content: center;
+  padding-top:100px;
+}
+
+.plans-options{
+  background-color: rgba(37, 37, 37, .98);
+  box-shadow: 6px 0 5px rgba(0, 0, 0, .5);
+  border-radius:4px;
+  padding: 20px;
+  position:relative;
+}
+
+.recommended{
+  background:#0EC714;
+  color:var(--secondary-color);
+  font-family: var(--text-font);
+  font-size:1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding:10px;
+  border-radius:4px;
+  position: absolute;
+  top:-30px;
+  right:-30px;
+  animation: recommendedAnimation 2s ease-in-out 4s infinite;
+}
+
+@keyframes recommendedAnimation {
+  from{
+    opacity:0;
+  } to {
+    opacity:1;
+  }
+}
+
+.plans-title{
+  margin-bottom:20px;
+  text-align: center;
+}
+
+.plans-title h4{
+  font-family: var(--title-font);
+  font-size:1.875rem;
+}
 
 
+.plans-title span{
+  font-family: var(--text-font);
+  font-size:1.25rem;
+  font-weight: bold;
+}
+
+.plans-price{
+  font-family: var(--title-font);
+  font-size:5rem;
+  color:var(--primary-color);
+  display:block;
+  margin-bottom:30px;  
+  text-align: center;
+}
+
+.plans-price sup,
+.plans-price sub{
+  font-size:1.25rem;
+}
+
+.online-plan{
+  font-size:1.5rem;
+  display:block;
+  margin:30px 0;
+  text-align: center;
+}
+
+.plans-info::before{
+  content: '';
+  display:block;
+  background-color: var(--background-color);
+  max-width: 100%;
+  height: 2px;
+  margin-bottom:30px;
+}
+
+.plans-info > p{
+  font-size:1rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.plans-info .individual-plan{
+  font-size:1.375rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color:var(--primary-color);
+}
+
+
+
+.plans-info li{
+  font-size:1rem;
+  padding: 6px 0;
+}
+
+.plans-info li::before{
+  content:"";
+  display:inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius:50%;
+  background-color: var(--primary-color);
+  margin-right: 10px;
+  position:relative;
+  top: -2px;
+}
+
+.plans-info:hover li::before{
+  background-color: #0EC714;
+}
+
+.plans-button{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:20px;
+  margin-top:30px;
+}
+
+
+.plans-button span{
+  font-size:1.125rem;
+  text-align: center;
+}
+
+.plans-button a{
+  background: #033EE1;
+  color: var(--secondary-color);
+  padding:16px;
+  border-radius:4px;
+  max-width: 258px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size:1.125rem;
+  transition: .5s ease-in-out;
+  text-align: center;  
+}
+
+.plans-button a:hover{
+  background:var(--primary-color);
+}
+
+
+
+
+
+@media (max-width: 1070px){
+  .plans-options{
+    padding:15px;
+  }
+}
 
 @media (max-width: 768px){
-
   body{
     font-size:1.125rem;
   }
@@ -342,6 +515,41 @@ header .menu-header a:hover{
     font-weight: 700;
   }
 
+
+  #plans{
+    background-image: url('../../assets/plansbgmob.png');
+  }
+
+  .title-plans-sections{
+    padding: 40px;
+  }
+  
+  #plans h2{
+    font-size:2.625rem;
+    text-transform: uppercase;
+    color:var(--primary-color);
+    margin-bottom:20px;
+  }
+  
+  #plans h3{
+    font-family:var(--text-font);
+    font-size:.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+
+  .plans-container{
+    grid-template-columns: 380px;
+    padding-top:40px;
+  }
+
+
+  .plans-options:last-of-type{
+    grid-area: 1;
+  }
+
+
 }
 
 
@@ -360,7 +568,7 @@ header .menu-header a:hover{
 
   #banner-about h1{
     font-size: 1.75rem;
-  text-shadow: 1px 1px 2px var(--background-color);
+    text-shadow: 1px 1px 2px var(--background-color);
   }
   
   #banner-about button{
@@ -387,5 +595,66 @@ header .menu-header a:hover{
   .description-count{
     font-size:.875rem;
   }
+
+
+  .title-plans-sections{
+    padding: 20px;
+  }
+
+
+  #plans h2{
+    font-size:1.75rem;
+  }
+
+  .plans-container{
+    grid-template-columns: 300px;
+  }
+
+
+  .plans-title{
+    margin-bottom:10px;
+  }
+  
+  .plans-title h4{
+    font-size:1.625rem;
+  }
+  
+  .plans-title span{
+    font-size:1.125rem;
+  }
+  
+  .plans-price{
+    font-size:4rem;
+    margin-bottom:20px;  
+  }
+  
+  .plans-price sup,
+  .plans-price sub{
+    font-size:1rem;
+  }
+  
+  .online-plan{
+    font-size:1rem;
+    margin:20px 0;
+  }
+
+  .plans-info::before{
+    margin-bottom:20px;
+  }
+  
+  .plans-info > p{
+    margin-bottom: 20px;
+  }
+  
+  .plans-info .individual-plan{
+    font-size:1rem;
+  }
+  
+  .plans-info li{
+    font-size:.875rem;
+    padding: 6px 0;
+  }
+  
+  
 
 }

@@ -27,7 +27,6 @@ if(button && headerNav && ulList && navList && navList.length){
 
 
 
-
 const number = document.querySelectorAll<HTMLElement>('#numbers .count');
 const section = document.querySelector<HTMLElement>('#numbers')
 
