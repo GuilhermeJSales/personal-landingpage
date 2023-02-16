@@ -64,6 +64,10 @@ header .mobileButton{
   display:none;
 }
 
+header .logotipo{
+  flex:1;
+}
+
 header .menu-header{
   display:flex;
   gap: 30px;
@@ -495,7 +499,6 @@ header .menu-header a:hover{
       width: 6px;
       height: 6px;
       border-radius: 50px;
-
       }
 
 
@@ -617,6 +620,11 @@ header .menu-header a:hover{
     padding:20px;
   }
 
+  header{
+    padding: 15px 20px;
+    z-index:2;
+  }
+
   #banner-about h1{
     font-size: 1.75rem;
     text-shadow: 1px 1px 2px var(--background-color);
@@ -666,7 +674,7 @@ header .menu-header a:hover{
   }
   
   .plans-title h4{
-    font-size:1.625rem;
+    font-size:1.5rem;
   }
   
   .plans-title span{

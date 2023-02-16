@@ -18,7 +18,6 @@ const headerNav = document.querySelector<HTMLElement>('#banner nav');
 const ulList = document.querySelector<HTMLUListElement>('.menu-header');
 const navList = document.querySelectorAll<HTMLElement>('.menu-header li');
 
-
 if(button && headerNav && ulList && navList && navList.length){
   const mobileMenu = new MobileMenu(button, headerNav, ulList, Array.from(navList));
   mobileMenu.init();
@@ -33,3 +32,5 @@ const section = document.querySelector<HTMLElement>('#numbers')
 if(number && section && number.length){
   const animaNumber = new AnimateNumbers(Array.from(number),section);
 }
+
+

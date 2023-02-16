@@ -2,7 +2,6 @@ export default class AnimateNumbers{
   numbers: HTMLElement[];
   time: number;
   section: HTMLElement;
-  private interval: any;
   private observer: IntersectionObserver;
   constructor(numbers: HTMLElement[], section:HTMLElement,  time: number = 30){
     this.numbers = numbers;  
@@ -18,7 +17,6 @@ export default class AnimateNumbers{
     },);
 
     this.observer.observe(this.section);
-
   }
 
 
@@ -28,12 +26,12 @@ animate() {
     if(!isNaN(total)){
     const increment = Math.floor(total / 100 + 1);
     let current = 0;
-    this.interval = setInterval(() => {
+    const interval = setInterval(() => {
       current += increment;
       number.innerText = String(current);
       if (current > total) {
-        number.innerText = String(total);
-        clearInterval(this.interval);
+        number.innerText = total.toFixed();
+        clearInterval(interval);
       }
     }, this.time);
   }
@@ -45,9 +43,9 @@ animate() {
 private handleObserver(entries: IntersectionObserverEntry[]) : void {
   entries.forEach((entry) => {
     if(entry.isIntersecting){
+      this.observer.disconnect();
       this.section.classList.add('active');
       this.animate();
-      this.observer.unobserve(this.section);
     }
   }); 
 }
