@@ -10,6 +10,9 @@ export default class Slide {
   timeout: Timeout | null;
   pausedTimeout: Timeout | null;
   paused: boolean;
+  thumbItems: HTMLElement[] | null;
+  thumb: HTMLElement | null;
+  thumbButton: HTMLElement[] | null;
   constructor(container: Element, slides: Element[], controls:Element, time: number = 5000 ) {
     this.container = container;
     this.slides = slides;
@@ -21,7 +24,12 @@ export default class Slide {
     this.pausedTimeout = null;
     this.paused = false;
 
+    this.thumbItems = null;
+    this.thumb = null;
+    this.thumbButton = null;
+
     this.init();
+
   }
 
   hide(el: Element){
@@ -31,9 +39,16 @@ export default class Slide {
   show(index: number) {
     this.index = index;
     this.slide = this.slides[this.index];
+
+    if(this.thumbItems) {
+      this.thumb = this.thumbItems[this.index];
+      this.thumbItems.forEach(thumb => thumb.classList.remove('active'));
+      this.thumb.classList.add('active')
+    }
+
     this.slides.forEach((el) => this.hide(el));
     this.slide.classList.add('active');
-    this.auto();
+    this.auto(this.time);
   }
 
   prev(){
@@ -48,9 +63,10 @@ export default class Slide {
     this.show(next);
   }
 
-  auto(){
+  auto(time: number){
     this.timeout?.clear();
-    this.timeout = new Timeout(() => this.next(), this.time)
+    this.timeout = new Timeout(() => this.next(), time)
+    if(this.thumb) this.thumb.style.animationDuration = `${time}ms`
   }
 
   pause(){
@@ -69,6 +85,10 @@ export default class Slide {
 
   }
 
+  
+
+
+
   private addControls(){
     const prevButton = document.createElement('button');  
     const nextButton = document.createElement('button'); 
@@ -85,9 +105,22 @@ export default class Slide {
     nextButton.addEventListener('pointerup', () => this.next());
   }
 
+  private addThumbItems() {
+    const thumbContainer = document.createElement('div');
+    thumbContainer.id = "slide-thumb";
+    for (let i = 0; i < this.slides.length; i++) {
+      thumbContainer.innerHTML += `<span><span class="thumb-item"></span</span>`
+    }
+    this.container.appendChild(thumbContainer);
+    this.thumbItems = Array.from(document.querySelectorAll(".thumb-item"));
+    this.thumbButton = Array.from(document.querySelectorAll('#slide-thumb > span'))
+    this.thumbButton?.forEach((button, index) => button.addEventListener('pointerdown', () => this.show(index)));
+  }
+
 
   init() {
     this.addControls();
+    this.addThumbItems();
     this.show(this.index);
   }
 }

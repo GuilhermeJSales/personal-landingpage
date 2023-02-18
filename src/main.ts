@@ -11,8 +11,6 @@ if(container && elements && controls && elements.children.length){
   const slide = new Slide(container, Array.from(elements.children), controls);
 }
 
-
-
 const button = document.querySelector<HTMLButtonElement>('.mobileButton');
 const headerNav = document.querySelector<HTMLElement>('#banner nav');
 const ulList = document.querySelector<HTMLUListElement>('.menu-header');

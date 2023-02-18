@@ -86,23 +86,29 @@ header .menu-header a:hover{
   font-size:1.5rem;
 }
 
+figure > figcaption {
+  width: 0;
+  height: 0;
+}
+
 
 
 /* BANNER ABOUT */
 #banner-about{
   z-index: 1;
   pointer-events: none;
-  max-width: 600px;
+  max-width: 50vw;
 }
 
 
 #banner-about h1{
   color:var(--primary-color);
-  font-size: 3.75rem;
+  font-size: 2rem;
   font-family: var(--title-font);
   text-transform: uppercase;
   text-shadow: 2px 2px 6px var(--background-color);
 }
+
 
 #banner-about button{
   font-family: var(--title-font);
@@ -132,6 +138,7 @@ header .menu-header a:hover{
   display:grid;
   position:absolute;
   top:0;
+  bottom:0;
   left:0;
 }
 
@@ -168,7 +175,41 @@ header .menu-header a:hover{
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+#slide-thumb{
+  display:flex;
+  position: absolute;
+  bottom:20px;
+  left:50vw;
+}
 
+
+#slide-thumb > span{
+  display:block;
+  height:12px;
+  width: 12px;
+  background:rgba(255, 255, 255, .5);
+  margin:5px;
+  border-radius: 50%;
+  overflow:hidden;
+  isolation: isolate;
+  cursor:pointer;
+}
+
+#slide-thumb .thumb-item.active{
+  display: block;
+  height: inherit;
+  background:var(--secondary-color);
+  border-radius: 50%;
+  transform: translate(-100%);
+  animation: thumb forwards linear running;
+}
+
+
+@keyframes thumb {
+  to{
+    transform: initial;
+  }
+}
 
 
 /* NÚMEROS SECTION */
@@ -532,12 +573,9 @@ header .menu-header a:hover{
 
 
   #banner-about{
-    max-width: 400px;
+    max-width:100%;
   }
   
-  #banner-about h1{
-    font-size: 2.625rem;
-  }
 
   #banner-about button{
     font-size:1.25rem;
@@ -627,7 +665,7 @@ header .menu-header a:hover{
 
   #banner-about h1{
     font-size: 1.75rem;
-    text-shadow: 1px 1px 2px var(--background-color);
+    text-shadow: .4px .4px .6px var(--background-color);
   }
   
   #banner-about button{
@@ -714,5 +752,14 @@ header .menu-header a:hover{
   }
   
   
+}
 
+@media (max-width:375px){
+  #banner-about h1{
+    font-size: 1.25rem;
+  }
+
+  #banner-about p{
+    font-size: 0.875rem;
+  }
 }
