@@ -111,7 +111,7 @@ export default class Slide {
     for (let i = 0; i < this.slides.length; i++) {
       thumbContainer.innerHTML += `<span><span class="thumb-item"></span</span>`
     }
-    this.container.appendChild(thumbContainer);
+    this.controls.appendChild(thumbContainer);
     this.thumbItems = Array.from(document.querySelectorAll(".thumb-item"));
     this.thumbButton = Array.from(document.querySelectorAll('#slide-thumb > span'))
     this.thumbButton?.forEach((button, index) => button.addEventListener('pointerdown', () => this.show(index)));
