@@ -7,7 +7,9 @@
     "removeComments": true,
     "noImplicitReturns": true,
     "outDir": "dist",
-    "isolatedModules": true
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src"],
   "exclude": ["node_modules"]

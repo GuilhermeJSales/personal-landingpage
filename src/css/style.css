@@ -34,6 +34,23 @@ body{
   color:var(--secondary-color);
 }
 
+h2{
+  font-family:var(--title-font);
+  font-size:3.125rem;
+  text-transform: uppercase;
+  color:var(--primary-color);
+  margin-bottom:20px;
+  text-align:center;
+}
+
+h3{
+  font-family:var(--text-font);
+  font-size:1.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align:center;
+}
+
 
 /* HEADER */
 
@@ -103,10 +120,16 @@ figure > figcaption {
 
 #banner-about h1{
   color:var(--primary-color);
-  font-size: 2rem;
+  font-size: 3.125rem;
   font-family: var(--title-font);
   text-transform: uppercase;
   text-shadow: 2px 2px 6px var(--background-color);
+}
+
+.subtitle-banner{
+  font-size:.875rem;
+  text-align: initial;
+  color:var(--secondary-color);
 }
 
 
@@ -265,21 +288,6 @@ figure > figcaption {
 
 .title-plans-sections{
   padding:100px;
-}
-
-#plans h2{
-  font-family:var(--title-font);
-  font-size:3.125rem;
-  text-transform: uppercase;
-  color:var(--primary-color);
-  margin-bottom:20px;
-}
-
-#plans h3{
-  font-family:var(--text-font);
-  font-size:1.25rem;
-  font-weight: 500;
-  text-transform: uppercase;
 }
 
 .plans-container{
@@ -442,6 +450,112 @@ figure > figcaption {
 
 
 
+
+
+
+/* EVOLUTION */
+
+#evolution{
+  position:relative;
+  background:#0C0C0C;
+  padding: 150px 100px;
+}
+
+.custom-shape-divider-top-1676782545 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1676782545 svg {
+  position: relative;
+  display: block;
+  width: calc(102% + 1.3px);
+  height: 50px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1676782545 .shape-fill {
+  fill: #131416;
+}
+
+.evolution-title{
+  text-align: center;
+  margin-bottom:100px;
+}
+
+
+.evolution-title span{
+  font-family: var(--text-font);
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  color: rgb(32,160,255);
+}
+
+
+.glide{
+  position:relative;
+  margin-bottom: 100px;
+}
+
+
+.glide__arrow--left{
+  position:absolute;
+  left: 20px;
+  top: 50%;
+  background: url('../../assets/prev.svg') center center no-repeat;
+  width: 28px;
+  height: 28px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.glide__arrow--right{
+  position:absolute;
+  right: 20px;
+  top: 50%;
+  background: url('../../assets/next.svg') center center no-repeat;
+  width: 28px;
+  height: 28px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+.glide--carousel{
+  cursor:grab;
+}
+
+.glide--dragging{
+  cursor:grabbing;
+}
+
+
+.call-to-action{
+  text-align: center;
+}
+
+.call-to-action a{
+  font-family: var(--text-font);
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  background:var(--primary-color);
+  padding:20px;
+  border-radius: 4px;
+  transition: .3s ease-in-out;
+}
+
+.call-to-action a:hover{
+ background:#033EE1;
+
+}
+
+
 @media (max-width: 1800px){
   #plans{
     background-image: url('../../assets/bgplans2k.png');
@@ -494,14 +608,34 @@ figure > figcaption {
 }
 
 @media (max-width: 1080px){
+
+  #banner-about h1{
+    font-size:2.5rem;
+  }
+
   #plans{
     background-image: url('../../assets/bgplans800.png');
   }
 }
 
+
 @media (max-width: 860px){
   body{
     font-size:1.125rem;
+  }
+
+  h2{
+    font-size:2.25rem;
+    text-transform: uppercase;
+    color:var(--primary-color);
+    margin-bottom:20px;
+  }
+  
+ h3{
+    font-family:var(--text-font);
+    font-size:.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
   }
 
   #banner{
@@ -578,6 +712,13 @@ figure > figcaption {
     max-width:100%;
   }
   
+  #banner-about h1{
+    font-size: 1.875rem;
+  }
+
+  #banner-about p{
+    font-size:1rem;
+  }
 
   #banner-about button{
     font-size:1.25rem;
@@ -596,7 +737,7 @@ figure > figcaption {
   }
 
   #numbers{
-    padding: 100px 40px;
+    padding: 50px 40px;
   }
   
   .numbers-grid{
@@ -609,6 +750,10 @@ figure > figcaption {
     font-weight: 700;
   }
 
+  #evolution{
+    padding: 150px 40px;
+  }
+
 
   #plans{
     background-image: url('../../assets/plansbgmob.png');
@@ -618,19 +763,7 @@ figure > figcaption {
     padding: 40px;
   }
   
-  #plans h2{
-    font-size:2.25rem;
-    text-transform: uppercase;
-    color:var(--primary-color);
-    margin-bottom:20px;
-  }
-  
-  #plans h3{
-    font-family:var(--text-font);
-    font-size:.875rem;
-    font-weight: 500;
-    text-transform: uppercase;
-  }
+
 
 
   .plans-container{
@@ -656,6 +789,10 @@ figure > figcaption {
     font-size:1rem;
   }
 
+  h2{
+    font-size:1.75rem;
+  }
+
   #banner{
     padding:20px;
   }
@@ -666,8 +803,16 @@ figure > figcaption {
   }
 
   #banner-about h1{
-    font-size: 1.75rem;
-    text-shadow: .4px .4px .6px var(--background-color);
+    font-size: 1.5rem;
+    text-shadow: .2px .2px .3px var(--background-color);
+  }
+
+  .subtitle-banner{
+    font-size:.75rem;
+  }
+
+  #banner-about p{
+    font-size:.75rem;
   }
   
   #banner-about button{
@@ -678,7 +823,7 @@ figure > figcaption {
   
 
   #numbers{
-    padding:100px 20px;
+    padding:50px 20px;
   }
   
   .numbers-grid{
@@ -696,13 +841,16 @@ figure > figcaption {
   }
 
 
-  .title-plans-sections{
-    padding: 20px;
+  #evolution{
+    padding: 100px 20px;
   }
 
-  #plans h2{
-    font-size:1.75rem;
+
+  .title-plans-sections{
+    padding: 50px 20px;
   }
+
+ 
 
   .plans-container{
     grid-template-columns: 300px;
@@ -757,9 +905,15 @@ figure > figcaption {
 }
 
 @media (max-width:375px){
+  h2{
+    font-size:1.25rem;
+  }
+ 
   #banner-about h1{
     font-size: 1.25rem;
   }
+
+  
 
   #banner-about p{
     font-size: 0.875rem;

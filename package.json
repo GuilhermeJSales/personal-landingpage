@@ -11,5 +11,10 @@
   "devDependencies": {
     "typescript": "^4.9.3",
     "vite": "^4.1.0"
+  },
+  "dependencies": {
+    "@glidejs/glide": "^3.6.0",
+    "@types/glidejs__glide": "^3.6.1",
+    "glide": "^0.2.0"
   }
 }
