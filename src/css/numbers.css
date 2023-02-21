@@ -1,0 +1,37 @@
+/* NÚMEROS SECTION */
+
+#numbers{
+  padding:100px;
+  opacity: 0;
+  transition: .5s ease-in;
+}
+
+#numbers.active{
+  opacity:1;
+}
+
+.numbers-grid{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:20px;
+  text-align: center;
+}
+
+.numbers-grid div{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.numbers-grid div.percentage-count{
+  display:flex;
+  flex-direction: row;
+}
+
+
+.count{
+  font-family: var(--title-font);
+  font-size:3.125rem;
+  color:var(--primary-color);
+  font-weight: 700;
+}

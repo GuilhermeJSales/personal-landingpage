@@ -1,0 +1,101 @@
+/* EVOLUTION */
+
+#evolution{
+  position:relative;
+  background:#0C0C0C;
+  padding: 150px 100px;
+}
+
+.custom-shape-divider-top-1676782545 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1676782545 svg {
+  position: relative;
+  display: block;
+  width: calc(102% + 1.3px);
+  height: 50px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1676782545 .shape-fill {
+  fill: #131416;
+}
+
+.evolution-title{
+  text-align: center;
+  margin-bottom:100px;
+}
+
+
+.evolution-title span{
+  font-family: var(--text-font);
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  color: rgb(32,160,255);
+}
+
+
+.glide{
+  position:relative;
+  margin-bottom: 100px;
+}
+
+
+.glide__arrow--left{
+  position:absolute;
+  left: 20px;
+  top: 50%;
+  background: url('../../assets/prev.svg') center center no-repeat;
+  width: 28px;
+  height: 28px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.glide__arrow--right{
+  position:absolute;
+  right: 20px;
+  top: 50%;
+  background: url('../../assets/next.svg') center center no-repeat;
+  width: 28px;
+  height: 28px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+.glide--carousel{
+  cursor:grab;
+}
+
+.glide--dragging{
+  cursor:grabbing;
+}
+
+
+.call-to-action{
+  text-align: center;
+}
+
+.call-to-action a{
+  font-family: var(--text-font);
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  background:var(--primary-color);
+  padding:20px;
+  border-radius: 4px;
+  transition: .3s ease-in-out;
+}
+
+.call-to-action a:hover{
+ background:#033EE1;
+
+}

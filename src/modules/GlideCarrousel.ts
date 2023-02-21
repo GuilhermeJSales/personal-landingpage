@@ -5,7 +5,7 @@ export const glide = new Glide('.glide', {
   startAt: 0,
   perView: 3,
   focusAt: 'center',
-  gap: 30,
+  gap: 50,
   hoverpause: true,
   breakpoints: {
     1200: {

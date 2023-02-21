@@ -1,0 +1,160 @@
+@media (max-width: 860px){
+  body{
+    font-size:1.125rem;
+  }
+
+  h2{
+    font-size:2.25rem;
+    text-transform: uppercase;
+    color:var(--primary-color);
+    margin-bottom:20px;
+  }
+  
+ h3{
+    font-family:var(--text-font);
+    font-size:.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  p{
+    font-size:1rem;
+  }
+
+  #banner{
+    padding:40px;    
+  }
+
+  header{
+    padding: 15px 40px;
+    z-index:2;
+  }
+
+  header .mobileButton{
+    display:block;
+    background: transparent;
+    color:var(--secondary-color);
+    cursor: pointer;
+    padding: 20px;
+    border: none;
+    outline:none;
+    transition: .5s ease-in-out;
+    -webkit-tap-highlight-color: transparent;      
+  }
+
+
+  header .mobileButton::after{
+    content:"";
+    display:block;
+    background: currentColor;
+    width: 30px;
+    height: 2px;
+    box-shadow:  0 10px currentColor,  0 -10px currentColor;
+    transition: .5s ease-in-out;
+    }
+
+
+  header .mobileButton.active::after{
+      transform: rotate(90deg);
+      width: 6px;
+      height: 6px;
+      border-radius: 50px;
+      }
+
+
+  header .mobileButton:hover{
+    color:var(--primary-color);
+  } 
+
+  
+  header .menu-header{
+   position:fixed;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   top:0;
+   left:-800px;
+   background:var(--background-color);
+   height: 100vh;
+   width: 60vw;
+   opacity:0;
+   transition: .5s ease-in-out;
+  }
+
+  header .menu-header.active{
+    left:0;
+    opacity:1;
+   }
+
+   header .menu-header li{
+    opacity: 0;
+   }
+
+
+  #banner-about{
+    max-width:100%;
+  }
+  
+  #banner-about h1{
+    font-size: 2.25rem;
+  }
+
+
+  #banner-about button{
+    font-size:1.25rem;
+    padding: 14px;
+  }
+
+
+  @keyframes linksMobile {
+    from{
+      opacity: 0;
+      transform: translateX(-100%);
+    }  to {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+
+  #numbers{
+    padding: 50px 40px;
+  }
+  
+  .numbers-grid{
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 80px;
+  }
+  
+  .count{
+    font-size:2.5rem;
+    font-weight: 700;
+  }
+
+  #evolution{
+    padding: 150px 40px;
+  }
+
+
+  #plans{
+    background-image: url('../../assets/plansbgmob.png');
+  }
+
+  .title-plans-sections{
+    padding: 40px;
+  }
+
+
+  .plans-container{
+    grid-template-columns: 380px;
+    padding-top:40px;
+  }
+
+  .plans-options:last-of-type{
+    grid-area: 1;
+  }
+
+  .plans-options:nth-of-type(2){
+    grid-area: 2;
+  }
+
+}

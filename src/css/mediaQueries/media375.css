@@ -1,0 +1,32 @@
+@media (max-width:375px){
+  h2{
+    font-size:1.25rem;
+  }
+  
+ 
+  #banner-about h1{
+    font-size: 1.625rem;
+  }
+
+
+  .plans-container{
+    grid-template-columns: minmax(180px, 300px)
+  }
+
+
+  .call-to-action a{
+    font-size:.75rem;
+    padding:8px;
+    border-radius: 4px;
+    transition: .3s ease-in-out;
+  }
+
+
+  .recommended{
+    padding:8px;
+    right:0px;
+
+  }
+  
+
+}

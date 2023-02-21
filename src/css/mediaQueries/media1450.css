@@ -1,0 +1,45 @@
+@media (max-width: 1450px){
+
+  /* BACKGROUND SECTIONS PLANS */
+  #plans{
+    background-image: url('../../assets/bgplans1k.png');
+    background-position: center;
+  }
+
+  .plans-options{
+    padding:15px;
+  }
+
+  .plans-title{
+    margin-bottom:10px;
+  }
+  
+  .plans-title h4{
+    font-size:1.5rem;
+  }
+  
+  .plans-price{
+    font-size:3.75rem;
+    margin-bottom:20px;  
+  }
+
+  .online-plan{
+    font-size:1rem;
+  }
+  
+  .plans-info > p{
+    margin-bottom: 20px;
+  }
+  
+  .plans-info .individual-plan{
+    font-size:1.125rem;
+  }
+  
+  
+  .plans-info li{
+    font-size:.875rem;
+    padding: 6px 0;
+  }
+
+
+}

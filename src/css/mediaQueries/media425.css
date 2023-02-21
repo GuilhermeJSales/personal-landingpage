@@ -1,0 +1,116 @@
+@media (max-width: 425px){
+
+  body{
+    font-size:1rem;
+  }
+
+  h2{
+    font-size:1.75rem;
+  }
+
+  #banner{
+    padding:20px;
+  }
+
+  header{
+    padding: 15px 20px;
+    z-index:2;
+  }
+
+  #banner-about h1{
+    font-size: 2rem;
+    text-shadow: .2px .2px .3px var(--background-color);
+  }
+
+  .subtitle-banner{
+    font-size:.75rem;
+  }
+  
+  #banner-about button{
+    font-size:1rem;
+    padding: 18px;
+    margin-top:20px;
+  }
+  
+
+  #numbers{
+    padding:50px 20px;
+  }
+  
+  .numbers-grid{
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
+  
+  }
+  
+  .count{
+    font-size:2rem;
+  }
+
+  .description-count{
+    font-size:.875rem;
+  }
+
+
+  #evolution{
+    padding: 100px 20px;
+  }
+
+
+  .title-plans-sections{
+    padding: 50px 20px;
+  }
+
+ 
+
+  .plans-container{
+    grid-template-columns: 300px;
+  }
+
+
+  .plans-title{
+    margin-bottom:10px;
+  }
+  
+  .plans-title h4{
+    font-size:1.5rem;
+  }
+  
+  .plans-title span{
+    font-size:1.125rem;
+  }
+  
+  .plans-price{
+    font-size:4rem;
+    margin-bottom:20px;  
+  }
+  
+  .plans-price sup,
+  .plans-price sub{
+    font-size:1rem;
+  }
+  
+  .online-plan{
+    font-size:1rem;
+    margin:20px 0;
+  }
+
+  .plans-info::before{
+    margin-bottom:20px;
+  }
+  
+  .plans-info > p{
+    margin-bottom: 20px;
+  }
+  
+  .plans-info .individual-plan{
+    font-size:1rem;
+  }
+  
+  .plans-info li{
+    font-size:.875rem;
+    padding: 6px 0;
+  }
+  
+  
+}

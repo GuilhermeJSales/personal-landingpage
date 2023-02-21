@@ -1,0 +1,11 @@
+@media (max-width: 1080px){
+
+  #banner-about h1{
+    font-size:2.5rem;
+  }
+
+  /* BACKGROUND SECTIONS PLANS */
+  #plans{
+    background-image: url('../../assets/bgplans800.png');
+  }
+}
