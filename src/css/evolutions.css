@@ -96,6 +96,6 @@
 }
 
 .call-to-action a:hover{
- background:#033EE1;
+ background:var(--hover-color);
 
 }

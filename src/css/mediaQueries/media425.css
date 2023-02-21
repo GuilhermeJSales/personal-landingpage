@@ -1,5 +1,12 @@
 @media (max-width: 425px){
 
+  .container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
   body{
     font-size:1rem;
   }
@@ -18,18 +25,24 @@
   }
 
   #banner-about h1{
-    font-size: 2rem;
-    text-shadow: .2px .2px .3px var(--background-color);
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px var(--background-color);
   }
 
   .subtitle-banner{
-    font-size:.75rem;
+    font-size:1rem;
   }
   
   #banner-about button{
     font-size:1rem;
     padding: 18px;
-    margin-top:20px;
+  }
+
+
+  /* VIDEO INFORMATIONS */
+
+  .informations p{
+    font-size:1rem;
   }
   
 

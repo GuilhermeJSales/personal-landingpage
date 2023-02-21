@@ -1,11 +1,39 @@
 @media (max-width: 1080px){
 
   #banner-about h1{
-    font-size:2.5rem;
+    font-size:3rem;
   }
+
+  .subtitle-banner{
+    font-size:1.2rem;
+
+  }
+
+
+    /* VIDEO SECTION */
+
+    .informations {
+      grid-template-columns: 1fr;
+      align-items: center;
+      margin-top:50px;
+    }
+
+    .video-iframe{
+      grid-area: 1;
+      margin: 0 auto;
+    }
+
+    .video-iframe iframe{
+      border-radius: 16px;
+      box-shadow: 6px 6px 6px rgba(0, 0, 0, .3);
+      overflow:hidden;
+
+    }
+    
+    
 
   /* BACKGROUND SECTIONS PLANS */
   #plans{
-    background-image: url('../../assets/bgplans800.png');
+    background-image: url('../../../assets/bgplans800.png');
   }
 }

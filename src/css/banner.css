@@ -2,11 +2,12 @@
 
 #banner{
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
+  align-items:flex-end;
+  justify-content: center;
+
   min-height: 100vh;
-  padding:100px;
+  padding-top:100px;
+  padding-bottom:100px;
   position:relative;
   overflow:hidden;
 }
@@ -18,8 +19,7 @@ header{
   width: 100%;
   position:absolute;
   top:0;
-  left:0;
-  padding:30px 100px;
+  padding:30px 0;
   z-index: 1;
 }
 
@@ -60,34 +60,34 @@ figure > figcaption {
 #banner-about{
   z-index: 1;
   pointer-events: none;
-  max-width: 65vw;
+  text-align:center;
 }
 
 
 #banner-about h1{
   color:var(--primary-color);
-  font-size: 3.125rem;
+  font-size: 4rem;
   font-family: var(--title-font);
   text-transform: uppercase;
-  text-shadow: 2px 2px 6px var(--background-color);
 }
 
 .subtitle-banner{
-  font-size:.875rem;
-  text-align: initial;
+  font-family: var(--text-font);
+  font-size:1.25rem;
+  font-weight: 500;
   color:var(--secondary-color);
 }
 
 
 #banner-about button{
-  font-family: var(--title-font);
+  font-family: var(--text-font);
   font-size:1.5rem;
   text-transform: uppercase;
   color:var(--secondary-color);
   background: var(--primary-color);
   padding: 20px;
-  border-radius: 14px;
-  margin-top:30px;
+  border-radius: 4px;
+
   pointer-events: initial;
   cursor:pointer;
   border:none;
@@ -96,7 +96,7 @@ figure > figcaption {
 }
 
 #banner-about button:hover{
-  background:#033EE1;
+  background:var(--hover-color);
 }
 
 
