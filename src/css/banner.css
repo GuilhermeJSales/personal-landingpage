@@ -27,8 +27,8 @@ header .mobileButton{
   display:none;
 }
 
-header .logotipo{
-  flex:1;
+header .logotipo {
+  max-width: 160px ;
 }
 
 header .menu-header{
