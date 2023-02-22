@@ -13,7 +13,8 @@
 }
 
 header{
-  display:flex;
+  display:grid;
+  grid-template-columns: 1fr auto;
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -23,12 +24,12 @@ header{
   z-index: 1;
 }
 
-header .mobileButton{
-  display:none;
+.logotipo{
+  display:inline-block;
 }
 
-header .logotipo {
-  max-width: 160px ;
+header .mobileButton{
+  display:none;
 }
 
 header .menu-header{

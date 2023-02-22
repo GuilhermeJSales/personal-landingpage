@@ -86,6 +86,7 @@
 }
 
 .call-to-action a{
+  display:inline-block;
   font-family: var(--text-font);
   color: var(--secondary-color);
   text-transform: uppercase;
