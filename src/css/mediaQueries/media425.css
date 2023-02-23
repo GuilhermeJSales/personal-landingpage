@@ -125,5 +125,9 @@
     padding: 6px 0;
   }
   
+
+  .glide__slide p{
+    font-size:1rem;
+  }
   
 }

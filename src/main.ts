@@ -1,5 +1,6 @@
 import AnimateNumbers from "./modules/AnimateNumbers";
-import { glide } from "./modules/GlideCarrousel";
+import { glideDepoiment } from "./modules/GlideDepoiments";
+import { glide } from "./modules/GlideEvolution";
 
 import MobileMenu from "./modules/MobileMenu";
 import Slide from "./modules/Slide";
@@ -35,7 +36,6 @@ if(number && section && number.length){
 }
 
 
-
-
-
 glide.mount();
+
+glideDepoiment.mount();

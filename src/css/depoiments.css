@@ -1,0 +1,62 @@
+
+
+#depoiment{
+  display:grid;
+  grid-template-columns: 1fr 50vw;
+  gap:50px;
+  background:#0C0C0C;
+  text-align:center;
+  overflow: hidden;
+}
+
+#depoiment img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.glide-depoiment{
+  align-self: center;
+  padding-right:50px;
+  padding-bottom:50px;
+  padding-top:50px;
+}
+
+
+.glide-depoiment .glide__slides{
+  margin-top:60px;
+}
+
+
+.glide__slide blockquote{
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.glide__slide p{
+  font-size:1.125rem;
+  font-style: italic;
+  line-height: 1.2;
+  letter-spacing: 1.5px;
+  margin-bottom:6px;
+}
+
+.glide__slide cite{
+  font-family: var(--text-font);
+  font-style: normal;
+  font-weight: bold;
+}
+
+.glide__bullet{
+  border-radius:50%;
+  cursor:pointer;
+  width: 12px;
+  height:12px;
+  background:gray;
+  margin-top:40px;
+}
+
+.glide__bullet--active{
+  background:#fefefe;
+}
