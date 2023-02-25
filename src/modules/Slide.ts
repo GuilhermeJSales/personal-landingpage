@@ -116,7 +116,7 @@ export default class Slide {
     this.thumbButton = Array.from(document.querySelectorAll('#slide-thumb > span'))
     this.thumbButton?.forEach((button, index) => button.addEventListener('pointerdown', () => this.show(index)));
   }
-
+ 
 
   init() {
     this.addControls();

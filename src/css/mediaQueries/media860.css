@@ -42,30 +42,28 @@
     background: transparent;
     color:var(--secondary-color);
     cursor: pointer;
-    padding: 20px 0;
+    padding: 20px;
     border: none;
     outline:none;
-    transition: .5s ease-in-out;
-    -webkit-tap-highlight-color: transparent;      
+    -webkit-tap-highlight-color: transparent; 
   }
-
 
   header .mobileButton::after{
     content:"";
     display:block;
     background: currentColor;
-    width: 30px;
-    height: 2px;
+    width: 1.6rem;
+    height: 3px;
+    border-radius: 3px;
     box-shadow:  0 10px currentColor,  0 -10px currentColor;
     transition: .5s ease-in-out;
     }
 
 
   header .mobileButton.active::after{
-      transform: rotate(90deg);
+      transform: rotate(-90deg);
       width: 6px;
       height: 6px;
-      border-radius: 50px;
       }
 
 
@@ -97,9 +95,6 @@
     opacity: 0;
    }
 
-   header .logotipo {
-    max-width: 70%;
-  }
 
    /* BANNER H1 */
 
