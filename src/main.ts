@@ -1,8 +1,10 @@
 import AnimateNumbers from "./modules/AnimateNumbers";
+import InputValidator from "./modules/InputValidator";
 import { glideDepoiment } from "./modules/GlideDepoiments";
 import { glide } from "./modules/GlideEvolution";
 
 import MobileMenu from "./modules/MobileMenu";
+import SendForm from "./modules/SendForm";
 import Slide from "./modules/Slide";
 
 
@@ -39,3 +41,37 @@ if(number && section && number.length){
 glide.mount();
 
 glideDepoiment.mount();
+
+
+
+const emailElement = document.querySelector<HTMLInputElement>('#email');
+const regexEmail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+if(emailElement && emailElement.type === 'email' && regexEmail) {
+  const validateEmail = new InputValidator(emailElement, regexEmail);
+}
+
+const nameElement = document.querySelector<HTMLInputElement>('#name');
+const regexName = /^[a-zA-ZÀ-ú]+(?:\s[a-zA-ZÀ-ú]+)*$/;
+if(nameElement && nameElement.type === 'text' && regexName) {
+  const validateName = new InputValidator(nameElement, regexName);
+}
+
+const telElement = document.querySelector<HTMLInputElement>('#telphone');
+const regexTel = /^\+?\d{1,3}[-.\s]?\d{6,14}$/;
+if(telElement && telElement.type === 'tel' && regexTel) {
+  const validateTel = new InputValidator(telElement, regexTel);
+}
+
+
+const contactForm = document.querySelector<HTMLFormElement>('.form');
+const inputsValues = document.querySelectorAll<HTMLInputElement>('.form input');
+const messageText = document.querySelector<HTMLTextAreaElement>('textarea');
+const spanSendMessage = document.querySelector<HTMLSpanElement>('.message-send');
+
+
+if(contactForm && inputsValues && inputsValues.length && messageText && spanSendMessage) {
+  const sendEmail = new SendForm(contactForm, Array.from(inputsValues), messageText, spanSendMessage);
+}
+
+

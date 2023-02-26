@@ -1,0 +1,178 @@
+.contacts-options{
+  display:grid;
+  grid-template-columns: minmax(350px, 400px) minmax(400px, 600px) ;
+  justify-content: center;
+  margin-top:100px;
+}
+
+.contact-midias{
+  background:var(--secondary-background);
+  padding:50px;
+  border-radius:10px 0 0 10px;
+  display:flex;
+  flex-direction: column;
+}
+
+.contact-midias h4{
+  font-family: var(--text-font);
+  font-weight: normal;
+  font-size: 1.25rem;
+  margin-bottom: 100px;
+}
+
+.contact-midias address a{
+  color:var(--secondary-color);
+  font-style: normal;
+  font-size:1rem;
+  display:block;
+  padding-left:32px;
+  margin-bottom:30px;  
+  max-width:max-content;  
+  word-wrap: break-word;
+}
+
+.contact-midias address a:first-child{
+  background: url('../../assets/contacts-icons/email-icon.svg') no-repeat 0px;
+}
+
+.contact-midias address a:nth-child(2){
+  background: url('../../assets/contacts-icons/telphone-icon.svg') no-repeat 0px;
+}
+
+.residence{
+  color:var(--secondary-color);
+  font-style: normal;
+  font-size:1rem;
+  display:block;
+  padding:4px 0 4px 40px;
+  margin-bottom:50px;  
+  background: url('../../assets/contacts-icons/address-icon.svg') no-repeat 0px;
+}
+
+
+.social-midias{
+  display:flex;
+  gap:20px;
+  align-items: center;
+  justify-content: center;
+  flex:1;
+}
+
+.social-midias a{
+  width: 30px;
+  height: 30px;
+}
+
+.contact-form{
+  background: var(--secondary-color);
+  padding:50px;
+  border-radius: 0 10px 10px 0;
+}
+
+.form{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:20px;
+}
+
+.form label{
+  display:block;
+  color:var(--secondary-background);
+  font-size:1rem;
+  font-family: var(--text-font);
+  margin-bottom: 5px;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="tel"],
+.form textarea{
+  font-family: var(--text-font);
+  font-size:1rem;
+  width: 100%;
+  padding:16px 10px;
+  color: var(--secondary-background);
+  background:#ECECEC;
+  border: none;
+  border-radius:4px;
+  outline: none;
+  resize:none;
+}
+
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form input[type="tel"]:focus,
+.form textarea:focus{
+  outline: 1px solid var(--primary-color);
+  background:#FEFEFE;
+  box-shadow:0 0 2px 2px #2692FF;
+}
+
+.form input::placeholder,
+.form textarea::placeholder{
+  color:#8A8A8A;
+}
+
+
+.form .col-2{
+  grid-column: span 2;
+}
+
+.form button{
+  background:var(--primary-color);
+  color: var(--secondary-color);
+  padding:16px;
+  border-radius:4px;
+  max-width: 300px;
+  outline:none;
+  border:none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size:1rem;
+  transition: .5s ease-in-out;
+  text-align: center;  
+  cursor:pointer;
+}
+
+.form button:hover{
+  background: var(--hover-color);
+}
+
+.form button:disabled{
+  opacity:.5;
+}
+
+
+.error-text{
+  display:none;
+}
+
+.error-text.active{
+  display:block;
+  font-size:.875rem;
+}
+
+.message-send{
+  display:none;
+}
+
+.message-send.active{
+  display:block;
+  font-weight: bold;
+  font-size:1rem;
+  text-transform: uppercase;
+  margin-top:10px;
+  color: var(--primary-color);
+}
+
+/* VALIDATION */
+
+@keyframes shake {
+  25%{
+    translate: 6px 0;
+  } 50%{
+    translate: -6px 0;
+  } 75%{
+    translate: 6px 0;
+  }
+}

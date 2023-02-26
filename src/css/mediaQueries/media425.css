@@ -1,10 +1,7 @@
 @media (max-width: 425px){
 
   .container{
-    max-width: 1400px;
-    margin: 0 auto;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding:40px 20px;
   }
 
   body{
@@ -15,12 +12,9 @@
     font-size:1.75rem;
   }
 
-  #banner{
-    padding:20px;
-  }
 
   header{
-    padding: 50px 20px;
+    padding: 40px 20px;
     z-index:2;
   }
 
@@ -46,14 +40,15 @@
   }
   
 
+  /* NUMBERS */
+
   #numbers{
-    padding:50px 20px;
+    padding: 40px 20px;
   }
   
   .numbers-grid{
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 50px;
-  
+    row-gap: 50px;  
   }
   
   .count{
@@ -64,16 +59,7 @@
     font-size:.875rem;
   }
 
-
-  #evolution{
-    padding: 100px 20px;
-  }
-
-
-  .title-plans-sections{
-    padding: 50px 20px;
-  }
-
+  /* PLANS */
  
 
   .plans-container{
@@ -129,5 +115,22 @@
   .glide__slide p{
     font-size:1rem;
   }
+
+  .glide-depoiment .glide__slides {
+    margin-top: 40px;
+}
+
+
+
+/* CONTACT */
+
+.contacts-options{
+  grid-template-columns: minmax(220px, 380px);
+}
+
+.contact-midias,
+.contact-form{
+  padding:30px;
+}
   
 }

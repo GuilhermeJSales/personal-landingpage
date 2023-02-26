@@ -46,6 +46,5 @@ h3{
 .container{
   max-width: 1400px;
   margin: 0 auto;
-  padding-right: 50px;
-  padding-left: 50px;
+  padding: 100px 50px;
 }

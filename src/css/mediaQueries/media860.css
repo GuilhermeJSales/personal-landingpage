@@ -25,10 +25,11 @@
 
   /* BANNER */
 
-  #banner{
-    padding-top:40px;
-    padding-bottom:40px;    
+
+  .container{
+    padding:50px 50px;
   }
+
 
   /* BANNER HEADER */
   header{
@@ -129,19 +130,10 @@
   }
 
 
-  /* VIDEO INFORMATIONS */
-
-  #video{
-    padding-top: 60px;
-  }
-  
-
-
-
   /* ANIMATED NUMBERS */
 
   #numbers{
-    padding: 50px 40px;
+    padding-bottom:40px;
   }
   
   .numbers-grid{
@@ -154,25 +146,28 @@
     font-weight: 700;
   }
 
-  #evolution{
-    padding: 150px 40px;
-  }
 
+/* EVOLUTIONS */
 
-  .call-to-action a{
-    font-size:1rem;
-  }
+.evolution-title{
+  padding-top:40px;
+  margin-bottom:40px;
+}
+
+.glide{
+  margin-bottom: 40px;
+}
+
+.call-to-action a{
+  font-size:1rem;
+}
   
 
+  /* PLANS */
 
   #plans{
     background-image: url('../../../assets/plansbgmob.png');
   }
-
-  .title-plans-sections{
-    padding: 40px;
-  }
-
 
   .plans-container{
     grid-template-columns: 380px;
@@ -187,6 +182,7 @@
     grid-area: 2;
   }
 
+  /* DEPOIMENTS */
 
   #depoiment{
     grid-template-columns: 100vw;
@@ -201,5 +197,12 @@
    padding: 0 20px 50px;
   }
   
+
+
+  /* CONTACT */
+
+  .contacts-options{
+    grid-template-columns: 1fr;
+  }
 
 }

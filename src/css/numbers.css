@@ -1,9 +1,11 @@
 /* NÚMEROS SECTION */
 
 #numbers{
-  padding:100px 0 100px 0;
   opacity: 0;
   transition: .5s ease-in;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 50px 50px;
 }
 
 #numbers.active{

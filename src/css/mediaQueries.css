@@ -1,19 +1,8 @@
-
-
-
-
-
-
-
-
-
-
-
-
 @import './mediaQueries/media1800.css';
 @import './mediaQueries/media1450.css';
 @import './mediaQueries/media1080.css';
 @import './mediaQueries/media860.css';
+@import './mediaQueries/media550.css';
 @import './mediaQueries/media425.css';
 @import './mediaQueries/media375.css';
 @import './mediaQueries/media280.css';
