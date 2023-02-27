@@ -132,5 +132,12 @@
 .contact-form{
   padding:30px;
 }
+
+
+/* footer */
+
+.footer-cols{
+  gap:20px;
+}
   
 }

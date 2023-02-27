@@ -1,0 +1,42 @@
+footer{
+  background:var(--secondary-background);
+  width: 100%;
+}
+
+footer h2{
+  font-size:2.5rem;
+  color:var(--text-color);
+  text-align:left;
+}
+
+
+.footer-cols{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap:50px;
+}
+
+
+
+.contact-footer,
+.contact-footer a,
+.footer-links a {
+  color:var(--text-color);
+  display:block;
+  font-style: normal;
+  font-size:1rem;
+  margin-bottom:20px;
+  word-wrap: break-word;
+}
+
+.contact-footer p{
+  border-top: 2px solid #707070;
+  border-bottom: 2px solid #707070;
+  padding: 20px 0;
+}
+
+
+
+
+/* testes */

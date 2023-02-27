@@ -7,7 +7,7 @@ export const glideDepoiment = new Glide('.glide-depoiment', {
   focusAt: 'center',
   gap: 50,
   autoplay:6000,
-  hoverpause: true,
+  hoverpause: false,
   dragThreshold: false,
 });
 
