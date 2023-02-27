@@ -38,8 +38,12 @@
     z-index:2;
   }
 
+  .logotipo{
+    display:inline-block;
+  }
+
   header .mobileButton{
-    display:block;
+    display:none;
     background: transparent;
     color:var(--secondary-color);
     cursor: pointer;
@@ -224,6 +228,11 @@
     font-size:2.5rem;
     color:var(--text-color);
     text-align:center;
+  }
+
+  .bottom-nav{
+    bottom:0;
+    height: 60px;
   }
 
 }
