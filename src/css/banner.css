@@ -24,10 +24,6 @@ header{
   padding: 50px;
 }
 
-header .mobileButton{
-  display:none;
-}
-
 header .menu-header{
   display:flex;
   gap: 30px;

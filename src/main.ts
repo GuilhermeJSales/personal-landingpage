@@ -3,10 +3,10 @@ import InputValidator from "./modules/InputValidator";
 import { glideDepoiment } from "./modules/GlideDepoiments";
 import { glide } from "./modules/GlideEvolution";
 
-import MobileMenu from "./modules/MobileMenu";
+
 import SendForm from "./modules/SendForm";
 import Slide from "./modules/Slide";
-
+import ScrollEvent from "./modules/ScrollEvent";
 
 
 
@@ -16,18 +16,6 @@ const controls = document.getElementById('slide-controls');
 if(container && elements && controls && elements.children.length){
   const slide = new Slide(container, Array.from(elements.children), controls);
 }
-
-const button = document.querySelector<HTMLButtonElement>('.mobileButton');
-const headerNav = document.querySelector<HTMLElement>('#banner nav');
-const ulList = document.querySelector<HTMLUListElement>('.menu-header');
-const navList = document.querySelectorAll<HTMLElement>('.menu-header li');
-
-if(button && headerNav && ulList && navList && navList.length){
-  const mobileMenu = new MobileMenu(button, headerNav, ulList, Array.from(navList));
-  mobileMenu.init();
- 
-}
-
 
 
 const number = document.querySelectorAll<HTMLElement>('#numbers .count');
@@ -74,4 +62,15 @@ if(contactForm && inputsValues && inputsValues.length && messageText && spanSend
   const sendEmail = new SendForm(contactForm, Array.from(inputsValues), messageText, spanSendMessage);
 }
 
+
+
+
+
+
+const mobileNav = document.querySelector<HTMLElement>('.bottom-nav');
+const mediaQuery = '(max-width:860px)';
+
+if(mobileNav && mediaQuery) {
+   const scrollEvent = new ScrollEvent(mobileNav, mediaQuery);
+}
 

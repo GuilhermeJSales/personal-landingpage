@@ -1,12 +1,12 @@
 .bottom-nav{
   position:fixed;
-  bottom:-50;
+  bottom:-50px;
   z-index: 220;
   height: 0;
   width: 100%;
-  background:#0D0D0D;
+  background:var(--background-color);
   box-shadow: 0 0 5px 1px rgba(0,0,0,.5);
-  transition:all .3s;
+  transition:all .5s;
 }
 
 .menu-fixed-mobile{

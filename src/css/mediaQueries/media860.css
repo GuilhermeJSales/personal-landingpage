@@ -41,70 +41,16 @@
   .logotipo{
     display:inline-block;
   }
-
-  header .mobileButton{
-    display:none;
-    background: transparent;
-    color:var(--secondary-color);
-    cursor: pointer;
-    padding: 20px;
-    border: none;
-    outline:none;
-    -webkit-tap-highlight-color: transparent; 
-  }
-
-  header .mobileButton::after{
-    content:"";
-    display:block;
-    background: currentColor;
-    width: 1.6rem;
-    height: 3px;
-    border-radius: 3px;
-    box-shadow:  0 10px currentColor,  0 -10px currentColor;
-    transition: .5s ease-in-out;
-    }
-
-
-  header .mobileButton.active::after{
-      transform: rotate(-90deg);
-      width: 6px;
-      height: 6px;
-      }
-
-
-  header .mobileButton:hover{
-    color:var(--primary-color);
-  } 
-
   
   header .menu-header{
-   position:fixed;
-   flex-direction: column;
-   justify-content: space-around;
-   align-items: center;
-   top:0;
-   left:-800px;
-   background:var(--background-color);
-   height: 100vh;
-   width: 60vw;
-   opacity:0;
-   transition: .5s ease-in-out;
+   display:none;
   }
-
-  header .menu-header.active{
-    left:0;
-    opacity:1;
-   }
-
-   header .menu-header li{
-    opacity: 0;
-   }
 
 
    /* BANNER H1 */
 
   #banner-about{
-    padding-bottom: 100px;
+    padding-bottom: 160px;
   }
   
   #banner-about h1{
@@ -131,6 +77,11 @@
       opacity: 1;
       transform: translateX(0%);
     }
+  }
+
+  #slide-thumb{
+    bottom:120px;
+
   }
 
 
@@ -230,7 +181,7 @@
     text-align:center;
   }
 
-  .bottom-nav{
+  .bottom-nav.active{
     bottom:0;
     height: 60px;
   }
