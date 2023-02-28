@@ -6,7 +6,9 @@ import { glide } from "./modules/GlideEvolution";
 
 import SendForm from "./modules/SendForm";
 import Slide from "./modules/Slide";
-import ScrollEvent from "./modules/ScrollEvent";
+import ScrollMobileMenu from "./modules/ScrollMobileMenu";
+import SmoothScroll from "./modules/SmoothScroll";
+import ScrollFixed from "./modules/ScrollFixed";
 
 
 
@@ -71,6 +73,18 @@ const mobileNav = document.querySelector<HTMLElement>('.bottom-nav');
 const mediaQuery = '(max-width:860px)';
 
 if(mobileNav && mediaQuery) {
-   const scrollEvent = new ScrollEvent(mobileNav, mediaQuery);
+   const scrollEvent = new ScrollMobileMenu(mobileNav, mediaQuery);
+}
+
+
+const links = document.querySelectorAll<HTMLElement>('[data-menu="smooth-scroll"] a[href^="#"]');
+if(links && links.length) {
+  const smoothScroll = new SmoothScroll(Array.from(links));
+}
+
+
+const scrollTop = document.querySelector<HTMLElement>('.arrowTop');
+if(scrollTop) {
+   const scrollTopEvent = new ScrollFixed(scrollTop);
 }
 

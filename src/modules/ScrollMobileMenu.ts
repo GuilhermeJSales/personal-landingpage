@@ -1,7 +1,7 @@
 import debounce from "./debounce";
 
 
-export default class ScrollEvent{
+export default class ScrollMobileMenu{
   component: HTMLElement;
   lastPosition: number;
   mediaQuery: string;

@@ -48,3 +48,20 @@ h3{
   margin: 0 auto;
   padding: 100px 50px;
 }
+
+
+.arrowTop{
+  position:fixed;
+  bottom: -150px;
+  right: 20px;
+  height: 0px;
+  width: 0px;
+  transition: all .5s;
+}
+
+
+.arrowTop.active{  
+  bottom: 80px;
+  width: 40px;
+  height: 40px;
+}

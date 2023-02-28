@@ -71,7 +71,7 @@ figure > figcaption {
 }
 
 
-#banner-about button{
+#banner-about a{
   font-family: var(--text-font);
   font-size:1.5rem;
   text-transform: uppercase;
@@ -79,15 +79,13 @@ figure > figcaption {
   background: var(--primary-color);
   padding: 20px;
   border-radius: 4px;
-
   pointer-events: initial;
   cursor:pointer;
-  border:none;
-  outline:none;
   transition: .5s ease-in-out;
+  display:inline-block;
 }
 
-#banner-about button:hover{
+#banner-about a:hover{
   background:var(--hover-color);
 }
 
@@ -148,8 +146,8 @@ figure > figcaption {
 
 
 #slide-thumb > span{
-  height:12px;
-  width: 12px;
+  height:14px;
+  width: 14px;
   background:rgba(255, 255, 255, .5);
   margin:5px;
   border-radius: 50%;
