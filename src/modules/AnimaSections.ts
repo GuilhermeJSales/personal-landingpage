@@ -36,7 +36,7 @@ export default class AnimaSections {
 
 
   checkDistance(){
-    this.distance.forEach(item => {
+    this.distance.forEach((item) => {
       if(window.scrollY > item.offset){
         item.element.classList.add(item.side, 'ativo');
       }

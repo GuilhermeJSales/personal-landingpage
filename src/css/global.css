@@ -92,7 +92,7 @@ h3{
 .js [data-anima="showTop"] {
   opacity: 0;
   transform: translate3d(0, -150px, 0);
-  transition: .8s ease-in-out;  
+  transition: .5s ease-in-out;  
 }
 
 .js [data-anima="showTop"].ativo.showTop{
@@ -106,7 +106,7 @@ transform: translate3d(0, 0, 0);
 .js [data-anima="showLeft"] {
   opacity: 0;
   transform: translate3d(-150px, 0 , 0);
-  transition: .8s ease-in-out;  
+  transition: .5s ease-in-out;  
 }
 
 .js [data-anima="showLeft"].ativo.showLeft{
@@ -120,9 +120,25 @@ transform: translate3d(0, 0, 0);
 
 .js [data-anima="opac"] {
   opacity: 0;
-  transition: 1s ease-in-out;  
+  transition: .6s ease-in-out;  
 }
 
 .js [data-anima="opac"].ativo.opac{
   opacity: 1;
+}
+
+
+
+/* SCROLLBAR */
+
+body::-webkit-scrollbar-track {
+  background-color: var(--background-color);
+}
+body::-webkit-scrollbar {
+  width: 1rem;
+  background: var(--primary-color);
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius:4px;
 }
