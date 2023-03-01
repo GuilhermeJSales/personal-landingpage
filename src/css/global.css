@@ -1,3 +1,7 @@
+html{
+  scroll-behavior: smooth;
+}
+
 *{
   margin: 0;
   padding:0;
@@ -64,4 +68,61 @@ h3{
   bottom: 80px;
   width: 40px;
   height: 40px;
+}
+
+
+
+/* SCROLL ANIMA */
+
+/* ANIMAÇÃO VINDO DE BAIXO */
+.js [data-anima="showBottom"] {
+    opacity: 0;
+    transform: translate3d(0, 150px, 0);
+    transition: .8s ease-in-out;  
+  }
+
+.js [data-anima="showBottom"].ativo.showBottom{
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+
+/* ANIMAÇÃO VINDO DE CIMA */
+
+.js [data-anima="showTop"] {
+  opacity: 0;
+  transform: translate3d(0, -150px, 0);
+  transition: .8s ease-in-out;  
+}
+
+.js [data-anima="showTop"].ativo.showTop{
+opacity: 1;
+transform: translate3d(0, 0, 0);
+}
+
+
+/* ANIMAÇÃO VINDO DA ESQUERDA */
+
+.js [data-anima="showLeft"] {
+  opacity: 0;
+  transform: translate3d(-150px, 0 , 0);
+  transition: .8s ease-in-out;  
+}
+
+.js [data-anima="showLeft"].ativo.showLeft{
+opacity: 1;
+transform: translate3d(0, 0, 0);
+}
+
+
+
+/* ANIMAÇÃO OPACIDADE */
+
+.js [data-anima="opac"] {
+  opacity: 0;
+  transition: 1s ease-in-out;  
+}
+
+.js [data-anima="opac"].ativo.opac{
+  opacity: 1;
 }

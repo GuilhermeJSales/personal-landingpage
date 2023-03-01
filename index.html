@@ -7,18 +7,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Secular+One&display=swap" rel="stylesheet">
+    <script>
+      document.documentElement.className = 'js';
+    </script>
     <link rel="stylesheet" href="./src/css/style.css">
-
-
-        <!-- Required Core Stylesheet -->
     <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
 
 
     <title>Personal Trainer - Landing Page</title>
   </head>
   <body>
-    <main id="banner">      
-      <header class="header active">
+    <main id="banner" data-anima="opac">      
+      <header class="header" data-anima="showTop">
+        <div class="headerContainer">
         <div>
           <a href="#" class="logotipo">
             <picture>
@@ -35,6 +36,7 @@
             <li><a href="#contact">Contato</a></li>
           </ul>
         </nav>
+      </div>
       </header>
 
       <section id="banner-about" class="container" data-menu="smooth-scroll">
@@ -80,10 +82,10 @@
 
 
   <section id="video" class="container">
-    <h2 id="about">Transforme seu corpo</h2>
-    <h3>alcance seu melhor desempenho com nossa consultoria online!</h3>
+    <h2 id="about" data-anima="opac">Transforme seu corpo</h2>
+    <h3 data-anima="opac">alcance seu melhor desempenho com nossa consultoria online!</h3>
     <div class="informations">
-      <div class="informations-text">
+      <div class="informations-text" data-anima="opac" >
         <p>
           Se você busca emagrecer, ganhar músculos, melhorar sua performance em determinado esporte ou simplesmente manter-se saudável e em forma, 
           um <strong>treino personalizado</strong> e acompanhamento nutricional adequado são fundamentais para alcançar 
@@ -103,7 +105,7 @@
         <p><strong>Não perca mais tempo e comece agora a sua transformação!</strong></p>
       </div>
 
-      <div class="video-iframe">
+      <div class="video-iframe" data-anima="opac">
         <iframe width="100%" height="315" src="https://www.youtube.com/embed/U6EufTxFkMg?feature=oembed&start&end&wmode=opaque&loop=0&controls=1&mute=0&rel=0&modestbranding=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
     </div>
@@ -141,7 +143,7 @@
 
   <!-- EVOLUTION -->
 
-  <section id="evolution">
+  <section id="evolution" data-anima="opac">
 
     <div class="custom-shape-divider-top-1676782545">
       <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -182,7 +184,7 @@
 
   <!-- PLANS -->
 
-  <section id="plans">
+  <section id="plans" data-anima="opac">
     <div class="container">
       <div class="title-plans-sections">      
         <h2>Conheça nossos planos</h2>
@@ -190,7 +192,7 @@
       </div>
 
     <div class="plans-container">
-      <div class="plans-options">
+      <div class="plans-options" data-anima="showBottom">
         <div class="plans-title">
           <h4>Planilha de treino</h4>
           <span>para treinar em casa</span>
@@ -211,7 +213,7 @@
         </div>
       </div>
 
-      <div class="plans-options">
+      <div class="plans-options" data-anima="showBottom">
         <div class="plans-title">
           <h4>Planilha de treino</h4>
           <span>para academia</span>
@@ -233,7 +235,7 @@
       </div>
 
 
-      <div class="plans-options">
+      <div class="plans-options" data-anima="showBottom">
         <span class="recommended">Recomendado</span>
         <div class="plans-title">
           <h4>Consultoria</h4>
@@ -261,11 +263,11 @@
 
   <section id="depoiment">
    
-    <div>
+    <div data-anima="opac">
         <img src="./assets/depoiment-bg.png" width="1560" height="1360" alt="jogadores de futebol americano fazendo stance">
     </div>
 
-    <div class="glide-depoiment">
+    <div class="glide-depoiment" data-anima="showLeft">
       <h2>Depoimentos dos alunos</h2>
       <h3>Acompanhe o que falam sobre nosso trabalho</h3>
       <div class="glide__track" data-glide-el="track">
@@ -327,13 +329,13 @@
     </div>
   </section>
 
-  <section id="contact" class="container">
-    <div class="contact-title">
+  <section id="contact" class="container" data-anima="opac">
+    <div class="contact-title" data-anima="showBottom">
       <h2>Entre em contato conosco</h2>
       <h3>Faça parte do nosso time!</h3>
     </div>
 
-    <div class="contacts-options">
+    <div class="contacts-options" data-anima="showBottom">
       <div class="contact-midias">
           <h4>Meios de contato</h4>
 
@@ -380,7 +382,7 @@
     </div>
   </section>
 
-  <footer>
+  <footer data-anima="showBottom">
     <div class="container">
       <div class="footer-cols">
         <div class="logo-footer">

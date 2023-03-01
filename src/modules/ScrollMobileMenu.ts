@@ -31,7 +31,7 @@ export default class ScrollMobileMenu{
   }
 
   addControls(){
-    document.addEventListener('scroll', this.getDistance);
+    window.addEventListener('scroll', this.getDistance);
   }
 
   init(){

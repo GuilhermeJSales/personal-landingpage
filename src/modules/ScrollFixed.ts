@@ -3,9 +3,9 @@ import debounce from "./debounce";
 export default class ScrollFixed{
   element: HTMLElement;
   lastPosition: number;
-  constructor(element: HTMLElement){
+  constructor(element: HTMLElement, lastPosition: number = 200){
     this.element = element;
-    this.lastPosition = 200;
+    this.lastPosition = lastPosition;
 
     this.scrollDistance = debounce(this.scrollDistance.bind(this));
     this.init();
@@ -17,14 +17,14 @@ export default class ScrollFixed{
 
     if(currentPosition > this.lastPosition) {
       this.element.classList.add('active');
-    } else if(currentPosition === 0) {
+    } else if(currentPosition <= 20) {
       this.element.classList.remove('active');
     }
 
   }
 
   addControls(){
-    document.addEventListener('scroll', this.scrollDistance);
+    window.addEventListener('scroll', this.scrollDistance);
   }
 
 

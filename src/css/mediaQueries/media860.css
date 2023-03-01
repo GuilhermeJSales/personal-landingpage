@@ -33,9 +33,14 @@
 
   /* BANNER HEADER */
   header{
-    padding-top: 50px;
-    padding-bottom: 50px;
     z-index:2;
+  }
+
+  header.active{
+    position:absolute;
+    background:none;
+    box-shadow: none;
+    animation: none;
   }
 
   .logotipo{

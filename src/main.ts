@@ -2,13 +2,12 @@ import AnimateNumbers from "./modules/AnimateNumbers";
 import InputValidator from "./modules/InputValidator";
 import { glideDepoiment } from "./modules/GlideDepoiments";
 import { glide } from "./modules/GlideEvolution";
-
-
 import SendForm from "./modules/SendForm";
 import Slide from "./modules/Slide";
 import ScrollMobileMenu from "./modules/ScrollMobileMenu";
 import SmoothScroll from "./modules/SmoothScroll";
 import ScrollFixed from "./modules/ScrollFixed";
+import AnimaSections from "./modules/AnimaSections";
 
 
 
@@ -29,7 +28,6 @@ if(number && section && number.length){
 
 
 glide.mount();
-
 glideDepoiment.mount();
 
 
@@ -53,25 +51,17 @@ if(telElement && telElement.type === 'tel' && regexTel) {
   const validateTel = new InputValidator(telElement, regexTel);
 }
 
-
 const contactForm = document.querySelector<HTMLFormElement>('.form');
 const inputsValues = document.querySelectorAll<HTMLInputElement>('.form input');
 const messageText = document.querySelector<HTMLTextAreaElement>('textarea');
 const spanSendMessage = document.querySelector<HTMLSpanElement>('.message-send');
-
-
 if(contactForm && inputsValues && inputsValues.length && messageText && spanSendMessage) {
   const sendEmail = new SendForm(contactForm, Array.from(inputsValues), messageText, spanSendMessage);
 }
 
 
-
-
-
-
 const mobileNav = document.querySelector<HTMLElement>('.bottom-nav');
 const mediaQuery = '(max-width:860px)';
-
 if(mobileNav && mediaQuery) {
    const scrollEvent = new ScrollMobileMenu(mobileNav, mediaQuery);
 }
@@ -88,3 +78,15 @@ if(scrollTop) {
    const scrollTopEvent = new ScrollFixed(scrollTop);
 }
 
+const headerTop = document.querySelector<HTMLElement>('.header');
+if(headerTop) {
+   const headerScrollTop = new ScrollFixed(headerTop, 250);
+}
+
+
+
+
+const sections = document.querySelectorAll<HTMLElement>('[data-anima]');
+if(sections && sections.length){
+  const animateSections = new AnimaSections(Array.from(sections));
+}
