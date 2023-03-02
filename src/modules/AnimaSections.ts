@@ -48,8 +48,14 @@ export default class AnimaSections {
   }
 
   init(){
-    this.getDistance();
-    this.checkDistance();
-    this.addControls();
+    if(!/(android|webos|iphone|ipad|ipod|blackberry|windows phone)/i.test(navigator.userAgent)){
+      this.getDistance();
+      this.checkDistance();
+      this.addControls();
+    } else {
+      this.sections.forEach(section => {
+        section.removeAttribute("data-anima");
+      })
+    }
   }
 }
