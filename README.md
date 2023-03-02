@@ -34,31 +34,52 @@
 
 
 <div align="center">
-  <h2>Technologies Used</h2><br>
-  <ul  style="list-style:none; display:flex; align-items:center; justify-content:center; gap:30px">
-    <li>
-      <img width="40" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
-      <p>JavaScript</p>
-    </li>
-    <li>
-      <img width="40" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />          
-      <p>TypeScript</p>
-    </li>
-    <li>
-      <img width="40" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-      <p>HTML5</p>
-    </li>
-    <li>
-      <img width="40" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />  
-      <p>CSS3</p>
-    </li>
-  </ul>
+
+  ## Technologies Used
+
+  <table align="center"> 
+  <tr>
+    <td align="center">
+      <img width="40" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" /><br>
+      <sub>
+        TypeScript
+      </sub>
+     </td> 
+     <td align="center">
+      <img width="40" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" /><br>
+      <sub>
+        JavaScript
+      </sub>
+     </td> 
+     <td align="center">
+      <img width="40" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" /><br>
+      <sub>
+        HTML5
+      </sub>
+     </td> 
+      <td align="center">
+      <img width="40" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" /><br>
+      <sub>
+        CSS3
+      </sub>
+     </td> 
+     <td align="center">
+      <img width="40" height="40" src="https://user-images.githubusercontent.com/90631825/222330622-6d9db9a3-9acf-4302-8848-803422def9cd.png" /><br>
+      <sub>
+        VITE
+      </sub>
+     </td>
+</table>
+
 </div>
 
+<br/>
+<br/>
 
 
-### 📚 Libraries Used
-1 📩 - To create a fully functional form using only JavaScript, I used the library <a href="https://www.emailjs.com/">EmailJS</a>. With just a few lines of code, it's possible to add form functionality to the website. The form validations were created with TypeScript, ensuring greater security and precision in data processing.
+
+### 📚 Libraries Used <br/><br/>
+1 📩 - To create a fully functional form using only JavaScript, I used the library <a href="https://www.emailjs.com/">EmailJS</a>. With just a few lines of code, it's possible to add form functionality to the website. The form validations were created with TypeScript, ensuring greater security and precision in data processing.<br/><br/>
 
 2 ⏩ - To create the slides for both the progress section and the testimonials section, I used the <a href="https://glidejs.com/">GlideJs</a> library. With a few commands, it was possible to create a fully customized and functional slider.
 
