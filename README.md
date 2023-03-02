@@ -1,40 +1,36 @@
-<h1 align="center">
-  <img src="https://user-images.githubusercontent.com/90631825/222297931-fd7b2bfe-62b7-4148-a392-5d0b3327bf28.svg">
-</h1>
+ # <center> ![logotipo](https://user-images.githubusercontent.com/90631825/222297931-fd7b2bfe-62b7-4148-a392-5d0b3327bf28.svg) </center>  
 
 
+<div align="center">
 
-<div>
-  <h2 align="center">
-    <span>Desktop Banner</span><br><br>
-    <img src="https://user-images.githubusercontent.com/90631825/222298547-9a7a10a3-2256-4b79-8410-e8fb549139c7.png">
-  </h2>
+ ![desktopbanner](https://user-images.githubusercontent.com/90631825/222298547-9a7a10a3-2256-4b79-8410-e8fb549139c7.png) 
+
+<br/><br/>
+ </div>
+    
+
+## 🏋🏾‍♂️ About:
+- This **project** was developed with the goal of putting into practice and improving the knowledge acquired during the **TypeScript certification**. It consists of a Landing Page intended for a **personal trainer who offers consultancy services and sells spreadsheets** for workouts at home or in the gym.
+
+<br/><br/>
+
+
+## 💡 Design Creation:
+- To create the layout, I used Adobe XD, and for image editing, I used Adobe Photoshop.
+<br/><br/>
+
+![xdpage](https://user-images.githubusercontent.com/90631825/222327911-7bd3201d-2930-4a41-a4eb-b263f5c90bc9.png)
+
+<br/><br/>
+
+<div align="center">
+
+## Mobile Sections
+<br/>
+
+![mobilepics](https://user-images.githubusercontent.com/90631825/222325894-d2f33390-b07c-421e-9d39-74858d7397f1.png)
+
 </div>
-<br><br>
-
-<div>
-<h2 align="center">Mobile Sections</h2><br>
-  <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap: 10px">
-      <img src="https://user-images.githubusercontent.com/90631825/222298765-b3504440-d72a-4517-9268-07e3f2674117.png"/>
-      <img src="https://user-images.githubusercontent.com/90631825/222300045-20453e00-2866-4a6c-bee9-350e8249a3ef.png"/>
-      <img src="https://user-images.githubusercontent.com/90631825/222300794-e58d8de6-77fa-4027-b1f2-93b6da24f862.png"/>
-      <img src="https://user-images.githubusercontent.com/90631825/222301789-90c8a45a-f170-41b5-8d07-a9c2554c3007.png"/>
-      <img src="https://user-images.githubusercontent.com/90631825/222302858-90a93f50-6949-4ded-8555-a29398eb303b.png"/>
-      <img src="https://user-images.githubusercontent.com/90631825/222303867-e8b4d7cd-0537-4d83-82f8-02b05920763f.png"/>
-  </div>
-</div>
-
-<br><br><br>
-
-
-### 🏋🏾‍♂️ About:
-This project was developed with the goal of putting into practice and improving the knowledge acquired during the TypeScript certification. It consists of a Landing Page intended for a personal trainer who offers consultancy services and sells spreadsheets for workouts at home or in the gym.<br><br>
-
-
-#### 💡 Design Creation: 
-To create the layout, I used Adobe XD, and for image editing, I used Adobe Photoshop. <br><br>
-<img src="https://user-images.githubusercontent.com/90631825/222321822-fa863efa-1ec9-4645-b165-d3db4a6163c6.png"/>
-<br><br><br>
 
 
 <div align="center">
