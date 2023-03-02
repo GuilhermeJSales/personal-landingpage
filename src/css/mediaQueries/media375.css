@@ -28,15 +28,9 @@
   }
   
 
-.contact-midias,
-.contact-form{
-  padding:10px;
-}
-
-
-.contact-midias address a,
-.residence p{
+  .contact-midias address a,
+  .residence p{
   font-size:.875rem;
-}
+  }
 
 }

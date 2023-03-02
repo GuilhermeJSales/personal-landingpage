@@ -14,7 +14,7 @@ export default class AnimaSections {
   constructor(sections:HTMLElement[]){
     this.sections = sections;
     this.distance = [];
-    this.windowPercent = window.innerHeight * 0.92;
+    this.windowPercent = window.innerHeight * 0.96;
 
     this.checkDistance = debounce(this.checkDistance.bind(this), 50);
 

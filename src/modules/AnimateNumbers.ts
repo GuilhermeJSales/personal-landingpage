@@ -13,7 +13,7 @@ export default class AnimateNumbers{
     this.observer = new IntersectionObserver(this.handleObserver.bind(this),{
       root:null,
       rootMargin: "0px",
-      threshold: 1.0,
+      threshold: .5,
     },);
 
     this.observer.observe(this.section);
